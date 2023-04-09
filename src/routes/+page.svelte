@@ -51,13 +51,21 @@
 
 	<!-- SAD PLASTIC FACTS-->
 
-	<h1 class="pictureCaption">Did you know</h1>
+	<!-- <h1 class="pictureCaption">Did you know</h1>
 	<br />
 	<p class="pictureCaption">
 		It takes 450 years to decompose a water bottle. <br /> It takes 80-200 years to decompose an
 		aluminum can.
 		<br /> It takes 10-20 years to decompose a chip bag.
-	</p>
+	</p> -->
+
+	<table align="center">
+		<tr>
+			<td> It takes 450 years to decompose a water bottle. </td>
+			<td>It takes 80-200 years to decompose an aluminum can.</td>
+			<td> It takes 10-20 years to decompose a chip bag. </td>
+		</tr>
+	</table>
 
 	<!-- SNACK BUTTONS -->
 	<br /> <button on:click={incrementFruitSnack}> Fruit Snacks {snackMap['Fruit Snacks']}</button>
@@ -77,8 +85,14 @@
 
 	p {
 		text-align: center;
+		font-size: 24pt;
 	}
 	div {
 		text-align: center;
+	}
+	td {
+		padding: 70px;
+		width: 13ch;
+		font-size: 24pt;
 	}
 </style>
