@@ -1,3 +1,30 @@
+<script>
+	const snackMap = {
+		'Fruit Snacks': 0,
+		'Plastic Bottle': 0,
+		'Aluminum Can': 0,
+		'Chip Bag': 0
+	};
+	function incrementSnack(snackName) {
+		snackMap[snackName]++;
+	}
+	function incrementFruitSnack() {
+		incrementSnack('Fruit Snacks');
+	}
+
+	function incrementPlasticBottle() {
+		incrementSnack('Plastic Bottle');
+	}
+
+	function incrementAluminumCan() {
+		incrementSnack('Aluminum Can');
+	}
+
+	function incrementChipBag() {
+		incrementSnack('Chip Bag');
+	}
+</script>
+
 <div class="container">
 	<ul class="nav">
 		<li>
@@ -11,14 +38,47 @@
 		</li>
 	</ul>
 	<h1 class="title">Plastic Decomposition Facts</h1>
-	<p class="pictureCaption">Here's a picture</p>
+	<p class="pictureCaption">Here's a picture of our contaminated ocean</p>
+	<div>
+		<img class="oceantrash" src="./assets/oceantrash.png" alt="Ocean Trash" />
+	</div>
 
-	<img class="oceantrash" src="./assets/oceantrash.png" alt="Ocean Trash" />
-
-    function increment () 
+	<!-- function increment () 
     {
         count = 0
         $count++;
-    }
-	<button on:click={increment}> Fruit Snacks </button>
+    } -->
+
+	<!-- SAD PLASTIC FACTS-->
+
+	<h1 class="pictureCaption">Did you know</h1>
+	<br />
+	<p class="pictureCaption">
+		It takes 450 years to decompose a water bottle. <br /> It takes 80-200 years to decompose an
+		aluminum can.
+		<br /> It takes 10-20 years to decompose a chip bag.
+	</p>
+
+	<!-- SNACK BUTTONS -->
+	<br /> <button on:click={incrementFruitSnack}> Fruit Snacks {snackMap['Fruit Snacks']}</button>
+	<br /> <br />
+	<button on:click={incrementPlasticBottle}> Plastic Bottle {snackMap['Plastic Bottle']} </button>
+	<br /> <br />
+	<button on:click={incrementAluminumCan}> Aluminum Can {snackMap['Aluminum Can']} </button> <br />
+	<br />
+	<button on:click={incrementChipBag}> Chip Bag {snackMap['Chip Bag']}</button>
 </div>
+
+<style>
+	h1 {
+		color: green;
+		text-align: center;
+	}
+
+	p {
+		text-align: center;
+	}
+	div {
+		text-align: center;
+	}
+</style>
